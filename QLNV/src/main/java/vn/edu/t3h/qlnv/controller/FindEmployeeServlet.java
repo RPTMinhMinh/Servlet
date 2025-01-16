@@ -27,8 +27,8 @@ public class FindEmployeeServlet extends HttpServlet {
         String position = req.getParameter("position");
         String departmentName = req.getParameter("departmentName");
 
-        fromHireDate = convertDate(fromHireDate,"dd/MM/yyyy", "yyyy-MM-dd");
-        toHireDate = convertDate(toHireDate,"dd/MM/yyyy", "yyyy-MM-dd");
+//        fromHireDate = convertDate(fromHireDate,"dd/MM/yyyy", "yyyy-MM-dd");
+//        toHireDate = convertDate(toHireDate,"dd/MM/yyyy", "yyyy-MM-dd");
 
         EmployeeService employeeService = new EmployeeServiceImpl();
         List<Employee> employees = employeeService.getEmployees(name, salary,fromHireDate,toHireDate,position,departmentName);
