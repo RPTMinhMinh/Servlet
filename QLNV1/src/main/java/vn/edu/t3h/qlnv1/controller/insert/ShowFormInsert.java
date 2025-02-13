@@ -15,7 +15,7 @@ import vn.edu.t3h.qlnv1.service.impl.DepartmentServiceImpl;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ShowFormInsert", value = "/form_insert")
+@WebServlet(name = "ShowFormInsert", value = "/cms/form_insert")
 public class ShowFormInsert  extends HttpServlet {
     private DepartmentService departmentService;
 

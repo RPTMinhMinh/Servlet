@@ -40,7 +40,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
     }
 
     public Connection getConnection() {
-        String url = "jdbc:mysql://localhost:3307/qlns";
+        String url = "jdbc:mysql://localhost:3307/quanlynhansu";
         String user = "root";
         String password = "admin";
 

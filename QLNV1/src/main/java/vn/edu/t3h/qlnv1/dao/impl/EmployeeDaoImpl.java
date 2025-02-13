@@ -14,7 +14,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
     public int insertEmployee(Employee employee) {
         int rows = 0;
         Connection connection = getConnection();
-        String sql = "insert into qlns.employees (name, position, salary, department_id, hire_date) values (?,?,?,?,?)";
+        String sql = "insert into quanlynhansu.employees (name, position, salary, department_id, hire_date) values (?,?,?,?,?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, employee.getName());
@@ -34,7 +34,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
         Employee employee = null;
         Connection connection = getConnection();
         String sql = "SELECT e.employee_id, e.name, e.position, e.salary, e.department_id, e.hire_date\n" +
-                "FROM qlns.employees e WHERE e.employee_id = ?";
+                "FROM quanlynhansu.employees e WHERE e.employee_id = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
@@ -67,7 +67,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
     public int updateEmployee(Employee employee) {
         int rows = 0;
         Connection connection = getConnection();
-        String sql = "UPDATE qlns.employees SET name = ?, position = ?, salary = ?, department_id = ?, hire_date = ? \n" +
+        String sql = "UPDATE quanlynhansu.employees SET name = ?, position = ?, salary = ?, department_id = ?, hire_date = ? \n" +
                 "                      WHERE employee_id = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -96,7 +96,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
     public int deleteEmployeeById(int id) {
         int rows = 0;
         Connection connection = getConnection();
-        String sql = "DELETE FROM qlns.employees WHERE employee_id = ?";
+        String sql = "DELETE FROM quanlynhansu.employees WHERE employee_id = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
@@ -233,7 +233,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 
     public Connection getConnection() {
-        String url = "jdbc:mysql://localhost:3307/qlns";
+        String url = "jdbc:mysql://localhost:3307/quanlynhansu";
         String user = "root";
         String password = "admin";
 

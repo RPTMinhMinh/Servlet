@@ -15,7 +15,7 @@ import vn.edu.t3h.qlnv1.service.impl.EmployeeServiceImpl;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "FindEmployeeServlet", value = "")
+@WebServlet(name = "FindEmployeeServlet", value = "/cms/employee")
 public class FindEmployeeServlet extends HttpServlet {
     private EmployeeService employeeService;
 

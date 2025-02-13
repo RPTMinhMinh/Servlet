@@ -12,7 +12,7 @@ import vn.edu.t3h.qlnv1.service.impl.EmployeeServiceImpl;
 
 import java.io.IOException;
 // _ = -
-@WebServlet(name = "DeleteEmployeeServlet", value = "/delete_employee")
+@WebServlet(name = "DeleteEmployeeServlet", value = "/cms/delete_employee")
 public class DeleteEmployeeServlet extends HttpServlet {
     private EmployeeService employeeService;
 
@@ -27,6 +27,6 @@ public class DeleteEmployeeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("id"));
         employeeService.deleteEmployeeById(id);
-        resp.sendRedirect("/");
+        resp.sendRedirect("/cms/employee");
     }
 }

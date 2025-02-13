@@ -20,7 +20,7 @@ import vn.edu.t3h.qlnv1.service.impl.EmployeeServiceImpl;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ShowFormUpdate", value = "/form_update")
+@WebServlet(name = "ShowFormUpdate", value = "/cms/form_update")
 public class ShowFormUpdate extends HttpServlet {
     private EmployeeService employeeService;
     private DepartmentService departmentService;

@@ -40,7 +40,10 @@
     </style>
 </head>
 <body>
-
+<div style="margin: 2%">
+    <span>Xin chào ${username}</span><br>
+    <a href="/logout">Đăng xuất</a>
+</div>
 <div class="row g-3">
     <div class="col-sm">
     </div>

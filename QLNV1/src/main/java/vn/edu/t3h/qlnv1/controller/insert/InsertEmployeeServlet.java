@@ -13,7 +13,7 @@ import vn.edu.t3h.qlnv1.service.impl.EmployeeServiceImpl;
 
 import java.io.IOException;
 
-@WebServlet(name = "InsertEmployeeServlet", value = "/insert_employee")
+@WebServlet(name = "InsertEmployeeServlet", value = "/cms/insert_employee")
 public class InsertEmployeeServlet extends HttpServlet {
     private EmployeeService employeeService;
 
@@ -40,7 +40,7 @@ public class InsertEmployeeServlet extends HttpServlet {
         employee.setHireDate(hireDate);
 
         employeeService.insertEmployee(employee);
-        resp.sendRedirect("/");
+        resp.sendRedirect("/cms/employee");
     }
 
 }
